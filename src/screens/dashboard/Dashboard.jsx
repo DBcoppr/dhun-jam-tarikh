@@ -8,6 +8,7 @@ import { checkSaveCondition } from "./utils";
 
 const Dashboard = () => {
   const { adminData } = useDashboardContext();
+
   const [customAmount, setCustomAmount] = useState(adminData?.amount || null);
   const handleCustomChange = (e) => {
     const { name, value } = e.target;
@@ -20,10 +21,11 @@ const Dashboard = () => {
   let amountCondition = checkSaveCondition(customAmount).result;
   if (!adminData || !adminData.charge_customers) return <>Loading....</>;
 
-  if (adminData.charge_customers) {
-    let elements = document.geta("dashboard-input");
+  if (!adminData.charge_customers) {
+    let elements = document.getElementsByClassName("dashboard-input");
+    console.log(elements);
     for (let i = 0; i < elements.length; i++) {
-      elements[i].style.color = "red"; // Change color to your desired color
+      elements[i].style.color = "#C2C2C2";
     }
   }
   return (
