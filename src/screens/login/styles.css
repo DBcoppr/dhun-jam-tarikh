@@ -1,0 +1,85 @@
+.layout-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.venue-admin-login {
+    background-color: #030303;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    width: 600px;
+    justify-items: center;
+  }
+  
+  .venue-admin-login h1 {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .venue-admin-login input,
+   button {
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ffffff65;
+    border-radius: 12px;
+  }
+  .venue-admin-login input{
+    background-color: #030303;
+    color: white;
+  }
+  .venue-admin-login input::placeholder{
+   color: #c8c8c8;
+  }
+  
+  button {
+    background-color: #6741d9;
+    cursor: pointer;
+    transition: border-color 0.2s ease-in-out;
+    border: 1px solid black;
+    color:#ffffff ;
+    margin: 36px 0 20px 0;
+  }
+  
+  button:hover {
+    border: 1px solid #f0c3f1;
+  }
+  
+  button:active {
+    border: 1px solid #f0c3f1;
+  }
+  
+  .greyed-out-field input {
+    background-color: #c2c2c2;
+    border-color: #c2c2c2;
+    color: #c2c2c2;
+  }
+  .greyed-out-field input {
+    background-color: #c2c2c2;
+    border-color: #c2c2c2;
+    color: #c2c2c2;
+  }
+  
+  .password-input-container {
+    position: relative;
+  }
+  .greyed-out-button{
+    background-color: #c2c2c2;
+  }
+  .password-visibility-toggle {
+    position: absolute;
+    top: 41%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #f1f1f1;
+  }
+  .newRegister{
+    width: 100%;
+    text-align: center;
+  }

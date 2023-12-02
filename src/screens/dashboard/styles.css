@@ -1,0 +1,130 @@
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.dashboard {
+    background-color: #030303;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dashboard h1{
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  
+  .dashboard-settings{
+    width: 600px;
+  }
+  .dashboard_settings_child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 36px;
+  }
+  .dashboard_settings_child p{
+    max-width: 50%
+
+  }
+  .radio-group{
+    display: flex;
+    gap: 24px;
+    width: 258px;
+    justify-content: center;
+  }
+  .radio-group label{
+    font-size: 16px;
+    color: white;
+  }
+  .radio-group input[type="radio"] {
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    width: 14px; 
+    height: 14px;
+    border: 3px solid #fff; 
+    border-radius: 50%; 
+    margin-right: 7px; 
+    outline: none; 
+    cursor: pointer;
+  }
+  
+  .active-radio:checked{
+    background-color: #6741D9;
+    border-color: white;
+  }
+  .inactive-radio:checked{
+    background-color: #C2C2C2;
+    border-color: white;
+  }
+  .dashboard_settings_child{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+    margin-bottom: 13px;
+  }
+  .dashboard_settings_child input{
+    background-color: transparent;
+    font-size: 16px;
+    border: 1px solid #ffffff;
+    border-radius: 9px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .dashboard-settings label{
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .custom_input{
+    max-width: 258px;
+    padding:8px 0px;
+  }
+  .dashboard_regular_song{
+    display: flex;
+    gap: 8px;
+    max-width: 258px;
+  }
+
+  .regular_input{
+    min-width: 56px;
+    padding:8px 0px;
+  }
+  .greyout-input{
+    border-color: #c2c2c2;
+    color: #c2c2c2;
+  }
+  .dashboard-input {
+    width: 100%;
+    border: 1px solid #ccc;
+    color: white;
+  }
+ 
+  
+  .dashboard-button {
+    padding: 10px 20px;
+    background-color: #6741D9;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dashboard-graph {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  

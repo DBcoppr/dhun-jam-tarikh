@@ -1,0 +1,15 @@
+.dashboard-graph{
+background-color: #030303;
+width: 600px;
+position: relative;
+}
+.barGraph > canvas{
+    width: 100%;
+    height: auto;
+}
+.dashboard-graph >img{
+    position: absolute;
+    height: 25px;
+    left: -4px;
+    width: 16px;
+}
