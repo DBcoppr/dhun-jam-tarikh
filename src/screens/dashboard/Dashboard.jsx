@@ -5,9 +5,10 @@ import "../login/styles.css";
 import BarGraph from "./components/BarGraph";
 import { useDashboardContext } from "../dashboardContext";
 import { checkSaveCondition } from "./utils";
+import { updatePrice } from "./api";
 
 const Dashboard = () => {
-  const { adminData } = useDashboardContext();
+  const { adminData, updateAdminData } = useDashboardContext();
 
   const [customAmount, setCustomAmount] = useState(adminData?.amount || null);
   const handleCustomChange = (e) => {
@@ -16,14 +17,17 @@ const Dashboard = () => {
     updatedAmount[name] = parseInt(value);
     setCustomAmount(updatedAmount);
   };
-  console.log(adminData);
+
+  const handleSave = async () => {
+    let response = await updatePrice({ amount: customAmount });
+    updateAdminData({ ...adminData, amount: response.data.data.amount });
+  };
 
   let amountCondition = checkSaveCondition(customAmount).result;
   if (!adminData || !adminData.charge_customers) return <>Loading....</>;
 
   if (!adminData.charge_customers) {
     let elements = document.getElementsByClassName("dashboard-input");
-    console.log(elements);
     for (let i = 0; i < elements.length; i++) {
       elements[i].style.color = "#C2C2C2";
     }
@@ -138,8 +142,10 @@ const Dashboard = () => {
           className={
             adminData.charge_customers &&
             !amountCondition &&
-            `greyed-out-button`
+            `greyed-out-button `
           }
+          onClick={handleSave}
+          disabled={!amountCondition}
         >
           Save
         </button>

@@ -70,6 +70,8 @@
   }
   .greyed-out-button{
     background-color: #c2c2c2;
+    cursor: not-allowed;
+  
   }
   .password-visibility-toggle {
     position: absolute;

@@ -71,7 +71,6 @@ const options = {
 };
 
 export default function BarGraph({ customAmount }) {
-  console.log(customAmount);
   const data = {
     labels: ["Custom", "Category 1", "Category 2", "Category 3", "Category 4"],
     datasets: [

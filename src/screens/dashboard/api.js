@@ -1,14 +1,18 @@
 import axios from "axios";
 
-export const updatePrice = async (adminId, updateBody) => {
+export const updatePrice = async (updateBody) => {
   try {
+    let id = JSON.parse(localStorage.getItem("adminData")).id;
     const response = await axios.put(
-      `https://stg.dhunjam.in/account/admin/${adminId}`,
+      `https://stg.dhunjam.in/account/admin/${id}`,
       updateBody
     );
-    return response.data;
+
+    return response; // Return only the 'data' from the response
   } catch (error) {
     alert(error);
+    // Optionally handle the error here or rethrow it
+    throw error;
   }
 };
 
