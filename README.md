@@ -1,3 +1,12 @@
+# Objective
+This project done as part of assement for dhunjam frontend developer, where I have to implement following feature:
+1.Login and verification
+2.Fetch data from api and plot its bar graph
+3.Dynamically change bar graph with the user input value
+4.Finally based on certain condition allow user update the value
+
+The bar graph were plotted between music category and its price
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
